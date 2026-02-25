@@ -14,14 +14,12 @@ const Hero: React.FC<HeroProps> = ({ onAssessmentClick }) => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img src={HERO_BG} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#071A22]/95 via-[#071A22]/80 to-[#0077C8]/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#071A22] via-transparent to-[#071A22]/30" />
       </div>
 
-      {/* Animated water particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <div
@@ -41,13 +39,11 @@ const Hero: React.FC<HeroProps> = ({ onAssessmentClick }) => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-3xl">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0077C8]/15 border border-[#0077C8]/30 rounded-full mb-8">
             <div className="w-2 h-2 rounded-full bg-[#00A99D] animate-pulse" />
             <span className="text-sm text-[#00A99D] font-medium">Atmospheric Water Generation for Tribal Nations</span>
           </div>
 
-          {/* Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F9FB] leading-[1.1] mb-6">
             Water Independence{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0077C8] via-[#00A99D] to-[#2BA84A]">
@@ -55,12 +51,10 @@ const Hero: React.FC<HeroProps> = ({ onAssessmentClick }) => {
             </span>
           </h1>
 
-          {/* Subline */}
           <p className="text-lg md:text-xl text-[#F7F9FB]/75 leading-relaxed mb-10 max-w-2xl">
             High-quality drinking water, generated from the air. Deployable at household, community, and municipal scale. Designed in partnership with Tribal Nations for resilience and autonomy.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={onAssessmentClick}
@@ -79,14 +73,12 @@ const Hero: React.FC<HeroProps> = ({ onAssessmentClick }) => {
             </button>
           </div>
 
-          {/* Ethics line */}
           <p className="mt-8 text-sm text-[#F7F9FB]/40 italic max-w-xl">
             "We work in partnership with Tribal Nations — projects designed with cultural respect and community consent."
           </p>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
         <span className="text-xs text-[#F7F9FB]/40 tracking-widest uppercase">Scroll</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F7F9FB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"><polyline points="6 9 12 15 18 9"/></svg>

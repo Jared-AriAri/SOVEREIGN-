@@ -35,7 +35,6 @@ const Navbar: React.FC<NavbarProps> = ({ onAssessmentClick }) => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#071A22]/95 backdrop-blur-lg shadow-lg shadow-black/20 border-b border-[#0077C8]/10' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group">
             <img src={LOGO_URL} alt="Sovereign Water Technologies" className="h-10 md:h-12 w-auto rounded-lg" />
             <div className="hidden sm:block">
@@ -44,7 +43,6 @@ const Navbar: React.FC<NavbarProps> = ({ onAssessmentClick }) => {
             </div>
           </button>
 
-          {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map(link => (
               <button
@@ -57,7 +55,6 @@ const Navbar: React.FC<NavbarProps> = ({ onAssessmentClick }) => {
             ))}
           </div>
 
-          {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <button
               onClick={onAssessmentClick}
@@ -82,7 +79,6 @@ const Navbar: React.FC<NavbarProps> = ({ onAssessmentClick }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-[#071A22]/98 backdrop-blur-xl border-t border-[#0077C8]/10">
           <div className="px-4 py-4 space-y-1">

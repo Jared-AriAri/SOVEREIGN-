@@ -65,8 +65,7 @@ const ProductCatalog: React.FC<ProductCatalogProps> = ({ onAssessmentClick }) =>
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-[#F7F9FB] mb-4">Find Your Water Solution</h2>
           <p className="text-[#F7F9FB]/60 max-w-2xl mx-auto">
-            From homes to large facilities — atmospheric water generation systems for every scale. Powered by Watergen
-            GENius™ technology, distributed by Awanube.
+            From homes to large facilities — atmospheric water generation systems for every scale. Powered by Watergen GENius™ technology.
           </p>
         </div>
 
@@ -355,7 +354,7 @@ const ProductDetailPanel: React.FC<DetailPanelProps> = ({ product, onClose, onQu
           </div>
 
           <p className="mt-4 text-xs text-[#F7F9FB]/30 text-center">
-            Powered by Watergen GENius™ technology. Distributed by Awanube.
+            Powered by Watergen GENius™ technology. Technology and patents are property of Watergen Ltd.
           </p>
         </div>
       </div>

@@ -110,7 +110,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
 
     const planSummary = buildPlanSummary();
 
-    // Save to database
     await submitLead({
       name: planContact.name,
       email: planContact.email,
@@ -121,7 +120,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
       lead_type: 'water_planner',
     });
 
-    // Open WhatsApp
     const rec = results.recommendations[0];
     const msg = `Water Plan Summary from ${planContact.name}:\n\nCommunity: ${selectedCommunity.label} (~${selectedCommunity.people} people)\nDaily Need: ${results.totalDailyNeed} L/day\nEnvironment: ${selectedEnv.label} (${selectedEnv.humidity})\n\nRecommended: ${rec.units}x ${rec.product.model}\nEstimated Production: ${rec.dailyProduction} L/day\nMonthly Energy Cost: ~$${results.monthlyEnergyCost}\nMonthly Savings vs Bottled: ~$${results.monthlySavings}\nCO₂ Avoided: ~${results.co2Avoided} kg/month\n\nContact: ${planContact.email} | ${planContact.phone}\n\nI'd like to request a detailed assessment for this plan.`;
     window.open(generateWhatsAppLink(msg), '_blank');
@@ -145,7 +143,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
           <p className="text-[#F7F9FB]/60 max-w-2xl mx-auto">Estimate your community's water needs and get personalized product recommendations. Three simple steps to water independence.</p>
         </div>
 
-        {/* Steps indicator */}
         <div className="flex items-center justify-center gap-2 mb-10">
           {[1, 2, 3].map(s => (
             <React.Fragment key={s}>
@@ -155,7 +152,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
           ))}
         </div>
 
-        {/* Step Content */}
         <div className="bg-[#0d2a35]/80 border border-[#0077C8]/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
           {step === 1 && (
             <div>
@@ -213,7 +209,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
           )}
         </div>
 
-        {/* Results */}
         {results && environment && (
           <div className="mt-8 bg-gradient-to-b from-[#0d2a35] to-[#091f28] border border-[#2BA84A]/20 rounded-2xl p-6 md:p-8">
             <h3 className="font-display text-2xl font-bold text-[#F7F9FB] mb-6 flex items-center gap-3">
@@ -255,7 +250,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
               ))}
             </div>
 
-            {/* Save Plan Form */}
             {showPlanForm && !planSaved && (
               <form onSubmit={handlePlanSubmit} className="mb-6 p-5 bg-[#071A22]/60 rounded-xl border border-[#0077C8]/15 space-y-3">
                 <h4 className="text-sm font-semibold text-[#F7F9FB]/80">Enter your contact details to save this plan</h4>
@@ -281,7 +275,6 @@ const WaterPlanner: React.FC<PlannerProps> = ({ onAssessmentClick }) => {
               </div>
             )}
 
-            {/* CTAs */}
             {!showPlanForm && !planSaved && (
               <div className="flex flex-col sm:flex-row gap-3">
                 <button onClick={handleSavePlan} className="flex-1 flex items-center justify-center gap-3 px-6 py-4 bg-[#2BA84A] hover:bg-[#239E3F] text-white font-semibold rounded-xl transition-colors shadow-lg shadow-[#2BA84A]/20">

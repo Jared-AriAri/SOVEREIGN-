@@ -22,7 +22,6 @@ const WhatsAppButton: React.FC = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-[80] flex items-end gap-3">
-      {/* Tooltip */}
       {tooltip && (
         <div className="hidden sm:block bg-white text-gray-800 text-sm font-medium px-4 py-2.5 rounded-xl shadow-xl max-w-[200px] animate-fade-in">
           <p>Need help? Chat with us on WhatsApp</p>
@@ -30,7 +29,6 @@ const WhatsAppButton: React.FC = () => {
         </div>
       )}
 
-      {/* Button */}
       <a
         href={generateWhatsAppLink('Hello, I\'m interested in learning about Sovereign Water Technologies and atmospheric water generation for my community.')}
         target="_blank"
@@ -38,7 +36,6 @@ const WhatsAppButton: React.FC = () => {
         className="group relative w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full flex items-center justify-center shadow-xl shadow-[#25D366]/30 hover:shadow-[#25D366]/50 transition-all duration-300 hover:scale-110"
         aria-label="Chat on WhatsApp"
       >
-        {/* Pulse ring */}
         <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
 
         <svg width="28" height="28" viewBox="0 0 24 24" fill="white">

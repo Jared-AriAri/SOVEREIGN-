@@ -60,7 +60,6 @@ const PartnerSection: React.FC<PartnerSectionProps> = ({ onAssessmentClick }) =>
           <p className="text-[#F7F9FB]/60 max-w-2xl mx-auto">Partner with Sovereign Water Technologies to bring atmospheric water generation to your community. We provide procurement support, grant guidance, and end-to-end deployment.</p>
         </div>
 
-        {/* Inquiry Form Modal */}
         {inquiryTier && (
           <div className="fixed inset-0 z-[90] flex items-center justify-center p-4" onClick={() => setInquiryTier(null)}>
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
@@ -91,7 +90,6 @@ const PartnerSection: React.FC<PartnerSectionProps> = ({ onAssessmentClick }) =>
           </div>
         )}
 
-        {/* Partnership Tiers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {tiers.map((tier) => (
             <div key={tier.name} className={`relative p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 ${tier.featured ? 'bg-gradient-to-b from-[#0d2a35] to-[#091f28] border-[#00A99D]/40 shadow-xl shadow-[#00A99D]/5' : 'bg-[#0d2a35] border-[#0077C8]/10 hover:border-[#0077C8]/30'}`}>
@@ -111,7 +109,6 @@ const PartnerSection: React.FC<PartnerSectionProps> = ({ onAssessmentClick }) =>
           ))}
         </div>
 
-        {/* ROI Calculator */}
         <div className="bg-gradient-to-r from-[#0d2a35] to-[#0a2430] border border-[#0077C8]/10 rounded-2xl p-6 md:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>

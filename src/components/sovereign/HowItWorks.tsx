@@ -56,7 +56,6 @@ const HowItWorks: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, i) => (
             <div key={i} className="relative group">
-              {/* Connector line */}
               {i < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-12 left-full w-full h-px bg-gradient-to-r from-[#0077C8]/20 to-transparent z-0" style={{ width: 'calc(100% - 2rem)', left: 'calc(50% + 2rem)' }} />
               )}
@@ -80,7 +79,7 @@ const HowItWorks: React.FC = () => {
 
         <div className="mt-10 text-center">
           <p className="text-xs text-[#F7F9FB]/30">
-            GENius™ technology and related patents are the exclusive property of Watergen Ltd. Distributed by Awanube.
+          GENius™ technology and related patents are the exclusive property of Watergen Ltd. Sovereign Water Technologies is an authorized distributor.
           </p>
         </div>
       </div>

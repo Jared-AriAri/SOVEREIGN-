@@ -80,7 +80,6 @@ const CaseForAction: React.FC = () => {
   return (
     <section id="case-for-action" className="relative py-16 md:py-24 bg-gradient-to-b from-[#071A22] via-[#0a2430] to-[#071A22]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-[#0077C8] bg-[#0077C8]/10 rounded-full mb-4">Why AWG</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-[#F7F9FB] mb-4">
@@ -91,7 +90,6 @@ const CaseForAction: React.FC = () => {
           </p>
         </div>
 
-        {/* Challenge Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           <div className="relative rounded-2xl overflow-hidden h-full min-h-[300px]">
             <img src={COMMUNITY_IMG} alt="Rural community landscape" className="w-full h-full object-cover" />
@@ -126,7 +124,6 @@ const CaseForAction: React.FC = () => {
           </div>
         </div>
 
-        {/* Solution Benefits */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
@@ -151,7 +148,6 @@ const CaseForAction: React.FC = () => {
           </div>
         </div>
 
-        {/* Sources */}
         <div className="p-5 bg-[#0d2a35]/50 border border-[#0077C8]/5 rounded-xl">
           <h4 className="text-xs font-semibold text-[#F7F9FB]/40 uppercase tracking-wider mb-3">Data Sources</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">

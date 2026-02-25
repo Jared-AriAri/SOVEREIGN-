@@ -32,7 +32,6 @@ const AssessmentModal: React.FC<AssessmentModalProps> = ({ isOpen, onClose, pref
     setSaving(true);
     setDbError('');
 
-    // 1. Save to database
     const result = await submitLead({
       name: formData.name,
       email: formData.email,
@@ -47,12 +46,10 @@ const AssessmentModal: React.FC<AssessmentModalProps> = ({ isOpen, onClose, pref
       setDbError(result.error || 'Failed to save. Your WhatsApp message will still be sent.');
     }
 
-    // 2. Open WhatsApp
     const whatsappMsg = `Hello, I'm ${formData.name} from ${formData.organization || 'my community'}.\n\nI'd like to request a water assessment.\n\nCommunity Size: ${formData.communitySize}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\n${formData.message}`;
     const whatsappUrl = generateWhatsAppLink(whatsappMsg);
     window.open(whatsappUrl, '_blank');
 
-    // 3. Prepare email
     const emailUrl = generateEmailLink(
       `Water Assessment Request — ${formData.organization || formData.name}`,
       `Name: ${formData.name}\nOrganization: ${formData.organization}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCommunity Size: ${formData.communitySize}\n\n${formData.message}`
